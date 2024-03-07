@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "WorkSans";
+  src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf),
+    url(./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "WorkSans", sans-serif;
+  background-color: hsl(275, 100%, 97%);
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* media */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large     */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1350px;
+  }
+}
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.cp {
+  width: 100%;
+}
+.mb {
+  display: none;
+}
+@media (max-width: 991px) {
+  .cp {
+    display: none;
+  }
+  .mb {
+    width: 100%;
+    display: block;
+  }
+}
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 2rem 2rem -1rem hsl(300, 8.2%, 88%);
+  border-radius: 2rem;
+  padding: 4rem;
+  max-width: 60rem;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.card .heading {
+  margin-bottom: 3rem;
+}
+.card .heading img {
+  margin-right: 2rem;
+}
+.card .heading h1 {
+  font-size: 5rem;
+}
+.card .ques .flex {
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.card .ques:last-of-type .flex {
+  margin-bottom: 0;
+}
+.card .ques .flex:hover h2 {
+  color: hsl(292.7, 100%, 35.5%);
+}
+.card .ques .flex h2 {
+  margin-right: 2rem;
+  font-size: 1.8rem;
+}
+
+.card .ques .answer {
+  margin-bottom: 3rem;
+  font-weight: 500;
+  color: hsl(292, 16%, 49%);
+  line-height: 1.5;
+  height: 0;
+  overflow: hidden;
+}
+.card .ques:last-of-type .answer {
+  margin-bottom: 0;
+}
